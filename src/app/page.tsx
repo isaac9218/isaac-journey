@@ -27,6 +27,8 @@ export default function Home() {
     },
   ];
 
+
+
   return (
     <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mx-auto max-w-4xl p-3">
@@ -73,7 +75,7 @@ export default function Home() {
 
         <div className="space-y-8">
           <div className="grid md:grid-cols-2 gap-8">
-            <section className="p-6 bg-gray-800/50 rounded-xl shadow-lg hover:border-l-4 border-primary">
+            <section className="p-6 bg-gray-800/50 rounded-xl shadow-lg hover:border-l-4 border-primary gradient-custom">
               <h3 className="text-2xl font-bold text-white mb-4">
                 Achievements
               </h3>
@@ -105,7 +107,7 @@ export default function Home() {
               </div>
             </section>
 
-            <section className="p-6 bg-gray-800/50 rounded-xl shadow-lg hover:border-l-4 border-yellow-500">
+            <section className="p-6 bg-gray-800/50 rounded-xl shadow-lg hover:border-l-4 border-yellow-500 gradient-custom">
               <h3 className="text-2xl font-bold text-white mb-4">
                 Struggles &amp; Lessons
               </h3>

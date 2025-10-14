@@ -32,5 +32,5 @@ body {
 }
 
 .gradient-custom {
-  @apply bg-gradient-to-b from-black via-15% to-gray-800
+  @apply bg-gradient-to-b from-black/35 via-15% to-gray-800
 }
