@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 
-const headerBarNames = ["About", "Home", "Projects"];
+const headerBarNames = [{titleSection: "About", link: ""}, {titleSection: "Home", link: ""}, {titleSection: "Projects", link: "#projects-section"}];
 
 const Header = () => {
   return (
@@ -28,10 +28,10 @@ const Header = () => {
             {headerBarNames.map((value, index) => (
               <a
                 key={index}
-                href="#"
+                href={value.link}
                 className="text-gray-700 hover:bg-black/80 dark:text-white font-bold px-4 py-2 hover:underline rounded-2xl btn-hover-animate"
               >
-                {value}
+                {value.titleSection}
               </a>
             ))}
           </nav>

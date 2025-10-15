@@ -32,5 +32,40 @@ body {
 }
 
 .gradient-custom {
-  @apply bg-gradient-to-b from-black/35 via-15% to-gray-800
+  @apply bg-gradient-to-b from-black/25 via-20% to-gray-800
+}
+
+@layer utilities {
+      .project-deck {
+        transition: all 0.3s ease-in-out;
+      }
+      .project-deck .project-card {
+        transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: absolute;
+      }
+      .project-deck .project-card:nth-child(1) {
+        transform: rotate(-2deg) translate(-2px, -4px);
+      }
+      .project-deck .project-card:nth-child(2) {
+        transform: rotate(1deg) translate(2px, -2px);
+      }
+      .project-deck .project-card:nth-child(3) {
+        transform: rotate(3deg) translate(4px, 0px);
+      }
+      .project-deck:hover {
+        transform: scale(1.05);
+      }
+      .project-deck:hover .project-card:nth-child(1) {
+        transform: rotate(-5deg) translateX(-10%);
+      }
+      .project-deck:hover .project-card:nth-child(2) {
+        transform: rotate(0deg) ;
+      }
+      .project-deck:hover .project-card:nth-child(3) {
+        transform: rotate(5deg) translateX(10%);
+      }
+    }
+
+.cardSelected {
+  transform: translateY(-110px);
 }
