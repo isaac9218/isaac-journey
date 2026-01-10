@@ -1,6 +1,6 @@
 import DeckCards from "../core/components/DeckCards";
-import heroBanner from "../assets/hero-banner.jpg";
-import Image from "next/image";
+import HeroSection from "../core/components/HeroSection";
+import MyJourney from "../core/components/MyJourney";
 
 const nowAndThen = [
   {
@@ -32,36 +32,12 @@ const previousAction = [
 
 export default function Home() {
   return (
-    <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8 bottom-60">
-      <section className="hero-banner">
-        <Image
-          src={heroBanner}
-          alt="Hero Banner"
-          className="w-full h-full object-cover rounded-2xl mb-12 shadow-2xl z-0"
-        />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 z-10">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white drop-shadow-2xl mb-6">
-            My Journey
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-100 max-w-3xl drop-shadow-lg">
-            A collection of thoughts, achievements, and lessons learned along
-            the way.
-          </p>
-        </div>
+    <main className="min-h-screen bg-gray-50">
+      <HeroSection />
 
-        {/* The overlayers on the image */}
-      </section>
+      {/* My Journey section comes here */}
       <div className="mx-auto max-w-4xl p-3">
-        <div className="mb-12">
-          <h2 className="text-4xl font-extrabold tracking-tight text-center text-purple-200 sm:text-5xl">
-            My Journey
-          </h2>
-          <p className="mt-4 text-2xl text-gray-400 flex">
-            A collection of thoughts, achievements, and lessons learned along
-            the way.
-          </p>
-        </div>
-
+        <MyJourney/>
         <div className="space-y-8">
           <div className="grid md:grid-cols-2 gap-8">
             {nowAndThen.map((value, index) => (
