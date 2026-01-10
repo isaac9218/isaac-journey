@@ -94,23 +94,16 @@ background-image {
   .project-deck:hover .project-card:nth-child(3) {
     transform: rotate(5deg) translateX(10%);
   }
+  /* Hero-section styles */
   .hero-section {
     @apply uppercase text-3xl font-bold text-center bg-black rounded-2xl w-full h-[600px] relative flex-1 items-center justify-center z-0;
   }
   .hero-section-overlay {
-    @apply absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/50 rounded-2xl
+    @apply absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/50 rounded-2xl;
   }
-  .hero-bottom {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .hero-corner {
-    position: absolute;
-    bottom: 2rem;
-    right: 2rem;
+  /* MyJourney-section styles */
+  .my-journey-tabs-trigger {
+    @apply flex items-center gap-2 px-6 py-3 text-gray-600 border-b-2 border-transparent data-[state=active]:border-emerald-500 data-[state=active]:text-emerald-600 data-[state=active]:font-bold transition-colors whitespace-nowrap;
   }
 }
 

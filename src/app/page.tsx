@@ -2,34 +2,6 @@ import DeckCards from "../core/components/DeckCards";
 import HeroSection from "../core/components/HeroSection";
 import MyJourney from "../core/components/MyJourney";
 
-const nowAndThen = [
-  {
-    title: "Where you are now",
-    message:
-      "Currently focused on developing a new application to streamline team workflows and researching AIs impact on UX design",
-  },
-  {
-    title: "Where you want to be",
-    message:
-      "Aspiring to lead innovative dessign projects, mentor emerging talent, and contribute to technologies that enhance useer experiences",
-  },
-];
-
-const previousAction = [
-  {
-    message:
-      "Worked in various design roles, from freelance to in-hourse positions at the tech companies, gaining diverse perspectivees and skills",
-  },
-  {
-    message:
-      " Embraced continuos learning by reading books like 'The Design of Everyday Things' and staying updated on emerging technologies",
-  },
-  {
-    message:
-      "Navigated complex projects, which taught valuable lessons in communication, adaptability, and collaboration.",
-  },
-];
-
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50">
@@ -38,36 +10,6 @@ export default function Home() {
       {/* My Journey section comes here */}
       <div className="mx-auto max-w-4xl p-3">
         <MyJourney/>
-        <div className="space-y-8">
-          <div className="grid md:grid-cols-2 gap-8">
-            {nowAndThen.map((value, index) => (
-              <section
-                key={index}
-                className="p-6 gradient-custom rounded-xl shadow-lg btn-hover-animate"
-              >
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  {value.title}
-                </h3>
-                <p className="text-gray-300 leading-relaxed">{value.message}</p>
-              </section>
-            ))}
-          </div>
-        </div>
-
-        <div className="space-y-8 my-8">
-          <section className="p-6 gradient-custom rounded-xl shadow-lg btn-hover-animate">
-            <h3 className="text-white font-bold text-2xl mb-4">
-              What I&apos;ve done to get here
-            </h3>
-            <div className="space-y-8">
-              {previousAction.map((value, index) => (
-                <div key={index} className="flex items-center gap-4">
-                  <div className="text-gray-300">{value.message}</div>
-                </div>
-              ))}
-            </div>
-          </section>
-        </div>
 
         <div className="space-y-8">
           <div className="grid md:grid-cols-2 gap-8">
