@@ -29,7 +29,7 @@ const Header = () => {
               <a
                 key={index}
                 href={value.link}
-                className="text-gray-700 hover:bg-black/80 dark:text-white font-bold px-4 py-2 hover:underline rounded-2xl btn-hover-animate"
+                className="text-gray-700 dark:text-white font-bold px-4 py-2 rounded-2xl btn-hover-animate"
               >
                 {value.titleSection}
               </a>
