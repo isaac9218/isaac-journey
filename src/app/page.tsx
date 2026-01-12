@@ -1,39 +1,59 @@
+import DeckCards from "../core/components/DeckCards";
+import heroBanner from "../assets/hero-banner.jpg";
+import Image from "next/image";
+
+const nowAndThen = [
+  {
+    title: "Where you are now",
+    message:
+      "Currently focused on developing a new application to streamline team workflows and researching AIs impact on UX design",
+  },
+  {
+    title: "Where you want to be",
+    message:
+      "Aspiring to lead innovative dessign projects, mentor emerging talent, and contribute to technologies that enhance useer experiences",
+  },
+];
+
+const previousAction = [
+  {
+    message:
+      "Worked in various design roles, from freelance to in-hourse positions at the tech companies, gaining diverse perspectivees and skills",
+  },
+  {
+    message:
+      " Embraced continuos learning by reading books like 'The Design of Everyday Things' and staying updated on emerging technologies",
+  },
+  {
+    message:
+      "Navigated complex projects, which taught valuable lessons in communication, adaptability, and collaboration.",
+  },
+];
+
 export default function Home() {
-  const nowAndThen = [
-    {
-      title: "Where you are now",
-      message:
-        "Currently focused on developing a new application to streamline team workflows and researching AIs impact on UX design",
-    },
-    {
-      title: "Where you want to be",
-      message:
-        "Aspiring to lead innovative dessign projects, mentor emerging talent, and contribute to technologies that enhance useer experiences",
-    },
-  ];
-
-  const previousAction = [
-    {
-      message:
-        "Worked in various design roles, from freelance to in-hourse positions at the tech companies, gaining diverse perspectivees and skills",
-    },
-    {
-      message:
-        " Embraced continuos learning by reading books like 'The Design of Everyday Things' and staying updated on emerging technologies",
-    },
-    {
-      message:
-        "Navigated complex projects, which taught valuable lessons in communication, adaptability, and collaboration.",
-    },
-  ];
-
-
-
   return (
-    <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8 bottom-60">
+      <section className="hero-banner">
+        <Image
+          src={heroBanner}
+          alt="Hero Banner"
+          className="w-full h-full object-cover rounded-2xl mb-12 shadow-2xl z-0"
+        />
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 z-10">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white drop-shadow-2xl mb-6">
+            My Journey
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-100 max-w-3xl drop-shadow-lg">
+            A collection of thoughts, achievements, and lessons learned along
+            the way.
+          </p>
+        </div>
+
+        {/* The overlayers on the image */}
+      </section>
       <div className="mx-auto max-w-4xl p-3">
         <div className="mb-12">
-          <h2 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+          <h2 className="text-4xl font-extrabold tracking-tight text-center text-purple-200 sm:text-5xl">
             My Journey
           </h2>
           <p className="mt-4 text-2xl text-gray-400 flex">
@@ -133,6 +153,24 @@ export default function Home() {
                 </div>
               </div>
             </section>
+          </div>
+        </div>
+
+        {/* Project's section */}
+        <div
+          id="projects-section"
+          className="my-8 gradient-custom container rounded-2xl shadow-2xl mx-auto"
+        >
+          <h1 className="font-bold text-2xl text-center text-white">
+            Projects
+          </h1>
+          <div className="space-y-24">
+            <div className="my-8 flex flex-col items-center">
+              <h2 className="mb-8 font-sans text-2xl text-center text-primary">
+                Past Projects
+              </h2>
+              <DeckCards />
+            </div>
           </div>
         </div>
       </div>
