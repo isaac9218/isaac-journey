@@ -94,20 +94,30 @@ background-image {
   .project-deck:hover .project-card:nth-child(3) {
     transform: rotate(5deg) translateX(10%);
   }
-  /* Hero-section styles */
-  .hero-section {
-    @apply uppercase text-3xl font-bold text-center bg-black rounded-2xl w-full h-[600px] relative flex-1 items-center justify-center z-0;
+  .portfolio-card:hover {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+
   }
-  .hero-section-overlay {
-    @apply absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/50 rounded-2xl;
-  }
-  /* MyJourney-section styles */
-  .my-journey-tabs-trigger {
-    @apply flex items-center gap-2 px-6 py-3 text-gray-600 border-b-2 border-transparent data-[state=active]:border-emerald-500 data-[state=active]:text-emerald-600 data-[state=active]:font-bold transition-colors whitespace-nowrap;
-  }
+
+  /* .portfolio-card:hover: */
+}
+/* Hero-section styles */
+.hero-section {
+  @apply uppercase text-3xl font-bold text-center bg-black rounded-2xl w-full h-[600px] relative flex-1 items-center justify-center z-0;
 }
 
-@layer utilities {
+.hero-section-overlay {
+  @apply absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/50 rounded-2xl;
+}
+/* MyJourney-section styles */
+.my-journey-tabs-trigger {
+  @apply flex items-center gap-2 px-6 py-3 text-gray-600 border-b-2 border-transparent data-[state=active]:border-emerald-500 data-[state=active]:text-emerald-600 data-[state=active]:font-bold transition-colors whitespace-nowrap;
+}
+
+.cardLabelText {
+  @apply border overflow-hidden w-1/2 px-3 py-1 text-center mt-2 p-1 rounded-lg text-sm font-medium text-green-600 bg-gradient-to-b from-green-300 to-gray-200;
 }
 
 .cardSelected {
