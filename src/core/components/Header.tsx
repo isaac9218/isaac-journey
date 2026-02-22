@@ -1,13 +1,26 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 const headerBarNames = [{titleSection: "About", link: ""}, {titleSection: "Home", link: ""}, {titleSection: "Projects", link: "#projects-section"}];
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    }
+  }, []);
+
   return (
-    <header className="mx-auto sticky top-0 z-10 dark:bg-black/40 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700">
+    <header className={`header-section ${isScrolled ? "bg-white/80 shadow-md" : "bg-white/30"}`}>
       <div className="container mx-auto px-2">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">

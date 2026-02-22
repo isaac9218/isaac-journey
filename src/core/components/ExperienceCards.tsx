@@ -26,7 +26,7 @@ export default function ExperienceCards({
         value={section}
         className="bg-white rounded-xl p-6 border border-gray-200 overflow-hidden group"
       >
-        <AccordionTrigger className="w-full items-center justify-between hover:bg-gray-50 rounded-xl transition-color">
+        <AccordionTrigger className="w-full items-center justify-between hover:bg-gray-200/30 hover:-translate-y-1 hover:shadow-lg rounded-xl transition-color">
           {
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center">

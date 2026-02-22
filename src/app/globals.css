@@ -103,6 +103,11 @@ background-image {
 
   /* .portfolio-card:hover: */
 }
+
+/* header-bar-styles */
+.header-section {
+  @apply mx-auto sticky top-0 z-10 transition-all duration-300 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700;
+}
 /* Hero-section styles */
 .hero-section {
   @apply uppercase text-3xl font-bold text-center bg-black rounded-2xl w-full h-[600px] relative flex-1 items-center justify-center z-0;
@@ -113,11 +118,11 @@ background-image {
 }
 /* MyJourney-section styles */
 .my-journey-tabs-trigger {
-  @apply flex items-center gap-2 px-6 py-3 text-gray-600 border-b-2 border-transparent data-[state=active]:border-emerald-500 data-[state=active]:text-emerald-600 data-[state=active]:font-bold transition-colors whitespace-nowrap;
+  @apply flex items-center gap-2 px-6 py-3 text-gray-600 border-b-2 border-transparent data-[state=active]:border-emerald-500 data-[state=active]:text-emerald-600 data-[state=active]:font-bold transition-colors whitespace-nowrap data-[state=inactive]:hover:bg-gray-400/30 data-[state=active]:hover:-translate-y-1;
 }
 
 .cardLabelText {
-  @apply border overflow-hidden w-1/2 px-3 py-1 text-center mt-2 p-1 rounded-lg text-sm font-medium text-green-600 bg-gradient-to-b from-green-300 to-gray-200;
+  @apply border overflow-hidden w-1/2 px-3 py-1 text-center mt-2 p-1 rounded-lg text-sm font-bold text-white bg-gradient-to-br from-green-500 to-teal-500;
 }
 
 .cardSelected {

@@ -27,8 +27,9 @@ const AccordionTrigger = React.forwardRef<
   <AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger
       ref={ref}
+      // this className had a property called hover:underline which was causing the text to shift when hovered, so I removed it.
       className={cn(
-        "flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline text-left [&[data-state=open]>svg]:rotate-180",
+        "flex flex-1 items-center justify-between py-4 px-2 text-sm font-medium transition-all text-left [&[data-state=open]>svg]:rotate-180",
         className
       )}
       {...props}
