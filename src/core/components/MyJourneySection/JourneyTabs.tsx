@@ -1,6 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { journeyCards } from "../data/journeyCards";
-import { journeyCardClasses } from "../styles/journeyCardsStyles";
+import { journeyCards } from "../../data/journeyCards";
+import { journeyCardClasses } from "../../styles/journeyCardsStyles";
 
 export default function JourneyTabs() {
   return (

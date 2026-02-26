@@ -47,73 +47,6 @@
   --radius-4xl: calc(var(--radius) + 16px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary: #137fec;
-  }
-}
-
-background-image {
-  src: url("../assets/hero-banner.jpg");
-}
-
-.btn-hover-animate {
-  @apply transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-lg hover:text-emerald-600;
-}
-
-.gradient-custom {
-  @apply bg-gradient-to-b from-black/25 via-20% to-gray-800;
-}
-
-@layer utilities {
-  .project-deck {
-    transition: all 0.3s ease-in-out;
-  }
-  .project-deck .project-card {
-    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: absolute;
-  }
-  .project-deck .project-card:nth-child(1) {
-    transform: rotate(-2deg) translate(-2px, -4px);
-  }
-  .project-deck .project-card:nth-child(2) {
-    transform: rotate(1deg) translate(2px, -2px);
-  }
-  .project-deck .project-card:nth-child(3) {
-    transform: rotate(3deg) translate(4px, 0px);
-  }
-  .project-deck:hover {
-    transform: scale(1.05);
-  }
-  .project-deck:hover .project-card:nth-child(1) {
-    transform: rotate(-5deg) translateX(-10%);
-  }
-  .project-deck:hover .project-card:nth-child(2) {
-    transform: rotate(0deg);
-  }
-  .project-deck:hover .project-card:nth-child(3) {
-    transform: rotate(5deg) translateX(10%);
-  }
-  /* Hero-section styles */
-  .hero-section {
-    @apply uppercase text-3xl font-bold text-center bg-black rounded-2xl w-full h-[600px] relative flex-1 items-center justify-center z-0;
-  }
-  .hero-section-overlay {
-    @apply absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/50 rounded-2xl;
-  }
-  /* MyJourney-section styles */
-  .my-journey-tabs-trigger {
-    @apply flex items-center gap-2 px-6 py-3 text-gray-600 border-b-2 border-transparent data-[state=active]:border-emerald-500 data-[state=active]:text-emerald-600 data-[state=active]:font-bold transition-colors whitespace-nowrap;
-  }
-}
-
-@layer utilities {
-}
-
-.cardSelected {
-  transform: translateY(-110px);
-}
-
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -181,6 +114,88 @@ background-image {
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #137fec;
+  }
+}
+
+background-image {
+  src: url("../assets/hero-banner.jpg");
+}
+
+.btn-hover-animate {
+  @apply transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-lg hover:text-emerald-600;
+}
+
+.gradient-custom {
+  @apply bg-gradient-to-b from-black/25 via-20% to-gray-800;
+}
+
+@layer utilities {
+  .project-deck {
+    transition: all 0.3s ease-in-out;
+  }
+  .project-deck .project-card {
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: absolute;
+  }
+  .project-deck .project-card:nth-child(1) {
+    transform: rotate(-2deg) translate(-2px, -4px);
+  }
+  .project-deck .project-card:nth-child(2) {
+    transform: rotate(1deg) translate(2px, -2px);
+  }
+  .project-deck .project-card:nth-child(3) {
+    transform: rotate(3deg) translate(4px, 0px);
+  }
+  .project-deck:hover {
+    transform: scale(1.05);
+  }
+  .project-deck:hover .project-card:nth-child(1) {
+    transform: rotate(-5deg) translateX(-10%);
+  }
+  .project-deck:hover .project-card:nth-child(2) {
+    transform: rotate(0deg);
+  }
+  .project-deck:hover .project-card:nth-child(3) {
+    transform: rotate(5deg) translateX(10%);
+  }
+  .portfolio-card:hover {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  }
+
+  /* .portfolio-card:hover: */
+}
+
+/* header-bar-styles */
+.header-section {
+  @apply mx-auto sticky top-0 z-10 transition-all duration-300 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700;
+}
+/* Hero-section styles */
+.hero-section {
+  @apply uppercase text-3xl font-bold text-center bg-black rounded-2xl w-full h-[600px] relative flex-1 items-center justify-center z-0;
+}
+
+.hero-section-overlay {
+  @apply absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/50 rounded-2xl;
+}
+/* MyJourney-section styles */
+.my-journey-tabs-trigger {
+  @apply flex items-center gap-2 px-6 py-3 text-gray-600 border-b-2 border-transparent data-[state=active]:border-emerald-500 data-[state=active]:text-emerald-600 data-[state=active]:font-bold transition-colors whitespace-nowrap data-[state=inactive]:hover:bg-gray-400/30 data-[state=active]:hover:-translate-y-1;
+}
+
+.cardLabelText {
+  @apply border overflow-hidden w-1/2 px-3 py-1 text-center mt-2 p-1 rounded-lg text-sm font-bold text-white bg-gradient-to-br from-green-500 to-teal-500;
+}
+
+.cardSelected {
+  transform: translateY(-110px);
 }
 
 @layer base {
