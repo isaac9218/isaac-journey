@@ -2,6 +2,8 @@ import DeckCards from "../core/components/MyJourneySection/DeckCards";
 import ExperienceSection from "../core/components/ExperienceSection";
 import HeroSection from "../core/components/HeroSection";
 import MyJourney from "../core/components//MyJourneySection/MyJourney";
+import ProjectCardsSlider from "../core/components/ProjectSection/ProjectCardsSlider";
+import MyProjectSection from "../core/components/ProjectSection/MyProjectSection";
 
 export default function Home() {
   return (
@@ -16,22 +18,7 @@ export default function Home() {
         <ExperienceSection/>
 
         {/* Project's section */}
-        <div
-          id="projects-section"
-          className="my-8 gradient-custom container rounded-2xl shadow-2xl mx-auto"
-        >
-          <h1 className="font-bold text-2xl text-center text-white">
-            Projects
-          </h1>
-          <div className="space-y-24">
-            <div className="my-8 flex flex-col items-center">
-              <h2 className="mb-8 font-sans text-2xl text-center text-primary">
-                Past Projects
-              </h2>
-              <DeckCards />
-            </div>
-          </div>
-        </div>
+        <MyProjectSection/>
       </div>
     </main>
   );
